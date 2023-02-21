@@ -1,0 +1,16 @@
+// light shade
+
+$font-color-primary:#000;
+$font-color-secondary:#ff871d;
+$primary-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+$background-color-primary:#fff;
+$button-color-primary:#ff871d;
+
+:export{
+    primaryText:$font-color-primary;
+    secondaryText:$font-color-secondary;
+    bgPrimary:$background-color-primary;
+
+    boxShadowPrimary:$primary-box-shadow;
+}
