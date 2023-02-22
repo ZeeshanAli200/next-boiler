@@ -21,6 +21,108 @@ export default function Home() {
       />
       <Input placeholder="helloe world" />
       <Button type="primary">button </Button>
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>{' '}
+      <Select
+        placeholder="helloe world"
+        options={[{ label: 'dsds', value: 'dsdas' }]}
+      />
+      <Input placeholder="helloe world" />
+      <Button type="primary">button </Button>
     </>
   )
 }
