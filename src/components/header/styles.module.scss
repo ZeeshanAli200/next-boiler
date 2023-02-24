@@ -18,9 +18,18 @@ $bg-color: $background-color-primary;
         justify-content: space-between;
         align-items: center;
         width: 80%;
+        @media only screen and (max-width: 991px) {
+            width: 95%;
+        }
+        @media only screen and (max-width: 610px) {
+            padding: 10px 0;
+        }
         .brand {
             font-weight: bold;
             font-size: xx-large;
+            @media only screen and (max-width: 610px) {
+                font-size: larger;
+            }
         }
         .navlinks {
             width: 70%;
@@ -33,6 +42,9 @@ $bg-color: $background-color-primary;
                     line-height: 0%;
                     margin-bottom: 5px;
                     cursor: pointer;
+                    @media only screen and (max-width: 610px) {
+                        display: none;
+                    }
                 }
                 .linkstext:hover {
                     color: $hoverColor;
@@ -50,6 +62,23 @@ $bg-color: $background-color-primary;
                 }
                 .linkstext:hover::after {
                     width: 100%;
+                }
+            }
+            .navIconLinks {
+                .navIcon {
+                    font-size: large;
+                    margin-right: 10px;
+                    :hover {
+                        color: $hoverColor;
+                    }
+                    @media only screen and (max-width: 610px) {
+                        display: none;
+                    }
+                }
+                .navIconMenuDrawer {
+                    @media only screen and (min-width: 610px) {
+                        display: none;
+                    }
                 }
             }
         }

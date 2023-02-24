@@ -1,2 +1,3 @@
-import { Header } from './header/header'
-export { Header }
+import Header from './header/header'
+import SideBar from './sidebar/sidebar'
+export { Header, SideBar }
