@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap');
 *{
   font-family: Jost;
 
@@ -110,6 +110,13 @@ a {
 
   /* Direction of the items, can be row or column */
   flex-direction: column;
+}
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 .loader-wrapper{

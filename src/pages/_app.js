@@ -26,7 +26,12 @@ export default function App({ Component, pageProps }) {
       theme={{
         token: {
           colorPrimary: variables.primaryText,
+          colorLink: variables.primaryText,
+          colorLinkActive: variables.secondaryText,
+          colorLinkHover: variables.secondaryText,
           colorPrimaryHover: variables.secondaryText,
+          colorTextPlaceholder: variables.placeholderColor,
+
           // colorPrimaryHover: variables.secondaryText,
           // colorPrimaryActive: variables.primaryText,
           colorPrimaryBg: variables.bgPrimary,

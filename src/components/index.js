@@ -1,3 +1,5 @@
 import Header from './header/header'
 import SideBar from './sidebar/sidebar'
-export { Header, SideBar }
+import ConfirmationModal from './Confirmation-modal'
+import LoginModal from './Login-modal/login-modal'
+export { Header, SideBar, ConfirmationModal, LoginModal }

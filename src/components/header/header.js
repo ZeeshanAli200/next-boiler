@@ -6,14 +6,21 @@ import {
   UserOutlined,
 } from '@ant-design/icons'
 import { useState } from 'react'
-import { SideBar } from '@/components'
+import { ConfirmationModal, LoginModal, SideBar } from '@/components'
 import style from './styles.module.scss'
 const Header = () => {
   const [open, setopen] = useState(false)
 
+  const [openLogin, setopenLogin] = useState(false)
+
   const handleClose = () => {
     setopen(!open)
   }
+
+  const handleLogin = () => {
+    setopenLogin(!openLogin)
+  }
+
   return (
     <>
       <header className={style.mainHeader}>
@@ -27,7 +34,7 @@ const Header = () => {
             </span>
             <span className={style.navIconLinks}>
               <SearchOutlined className={style.navIcon} />
-              <UserOutlined className={style.navIcon} />
+              <UserOutlined className={style.navIcon} onClick={handleLogin} />
               <HeartOutlined className={style.navIcon} />
               <ShoppingCartOutlined className={style.navIcon} />
               <MenuOutlined
@@ -39,6 +46,8 @@ const Header = () => {
         </div>
       </header>
       <SideBar open={open} handleClose={handleClose} />
+
+      <LoginModal handleCancel={handleLogin} open={openLogin} />
     </>
   )
 }

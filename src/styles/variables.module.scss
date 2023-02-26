@@ -1,16 +1,21 @@
 // light shade
 
-$font-color-primary:#000;
-$font-color-secondary:#ff871d;
+$font-color-primary: #000;
+$font-color-secondary: #ff871d;
+$placeholder-color: grey;
 $primary-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-$background-color-primary:#fff;
-$button-color-primary:#ff871d;
+$background-color-primary: #fff;
+$button-color-primary: #ff871d;
 
-:export{
-    primaryText:$font-color-primary;
-    secondaryText:$font-color-secondary;
-    bgPrimary:$background-color-primary;
+$border-grey-shade1: #d9d9d9;
 
-    boxShadowPrimary:$primary-box-shadow;
+:export {
+    placeholderColor: $placeholder-color;
+    borderShade1: $border-grey-shade1;
+    primaryText: $font-color-primary;
+    secondaryText: $font-color-secondary;
+    bgPrimary: $background-color-primary;
+
+    boxShadowPrimary: $primary-box-shadow;
 }
