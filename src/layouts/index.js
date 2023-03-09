@@ -1,2 +1,4 @@
-import { AuthSharedLayout } from './AuthSharedLayout'
-export { AuthSharedLayout }
+import { AuthSharedLayout } from './AuthSharedLayout.js'
+import { PublicSharedLayout } from './PublicSharedLayout'
+
+export { AuthSharedLayout, PublicSharedLayout }

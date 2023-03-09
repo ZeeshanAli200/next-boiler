@@ -1,5 +1,7 @@
 // import 'antd/dist/antd.css'
-import store from '@/store/store'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import { store, persistor } from '@/store/store'
 import '@/styles/globals.css'
 import { ConfigProvider, Spin } from 'antd'
 import { Provider } from 'react-redux'
@@ -7,6 +9,9 @@ import variables from '@/styles/variables.module.scss'
 import { AuthSharedLayout } from '@/layouts'
 import { useEffect, useState } from 'react'
 import dataHandler from '@/services/data-handler'
+import { PersistGate } from 'redux-persist/integration/react'
+import { Jost } from '@next/font/google'
+const jost = Jost({ subsets: ['latin'] })
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(() => true)
 
@@ -17,6 +22,9 @@ export default function App({ Component, pageProps }) {
       setLoading(false)
     }
   }, [])
+
+  console.log({ pageProps, Component })
+
   return loading ? (
     <div className="loader-wrapper">
       <Spin />
@@ -25,24 +33,23 @@ export default function App({ Component, pageProps }) {
     <ConfigProvider
       theme={{
         token: {
+          fontFamily: `Jost`,
           colorPrimary: variables.primaryText,
           colorLink: variables.primaryText,
           colorLinkActive: variables.secondaryText,
           colorLinkHover: variables.secondaryText,
           colorPrimaryHover: variables.secondaryText,
           colorTextPlaceholder: variables.placeholderColor,
-
-          // colorPrimaryHover: variables.secondaryText,
-          // colorPrimaryActive: variables.primaryText,
           colorPrimaryBg: variables.bgPrimary,
-          // colorBgMask: variables.secondaryText,
         },
       }}
     >
       <Provider store={store}>
-        <AuthSharedLayout>
-          <Component {...pageProps} />
-        </AuthSharedLayout>
+        <PersistGate persistor={persistor} loading={null}>
+          <AuthSharedLayout>
+            <Component {...pageProps} />
+          </AuthSharedLayout>
+        </PersistGate>
       </Provider>
     </ConfigProvider>
   )

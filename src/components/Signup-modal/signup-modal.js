@@ -3,10 +3,8 @@ import variables from '@/styles/variables.module.scss'
 import { Button, Col, Form, Input, Modal, Row } from 'antd'
 import style from './styles.module.scss'
 import { BRAND_NAME, validateMsgRequired } from '@/constants'
-import SignUpModal from '../Signup-modal/signup-modal'
-import { useState } from 'react'
 
-const LoginModal = ({
+const SignUpModal = ({
   open = false,
   text = 'dummy text',
   title = 'title    ',
@@ -14,15 +12,6 @@ const LoginModal = ({
   loading = false,
   handleSubmit = null,
 }) => {
-  const [registerOpen, setregisterOpen] = useState(false)
-  const handleCloseRegister = () => {
-    setregisterOpen(false)
-  }
-  const handleOpenRegister = () => {
-    setregisterOpen(true)
-    handleCancel()
-  }
-
   return (
     <>
       <Modal
@@ -36,7 +25,7 @@ const LoginModal = ({
           <>
             <span className={style.loginTitleWrapper}>
               <h3>{BRAND_NAME}</h3>
-              <h6>Great to have you back!</h6>
+              <h6>Register at {BRAND_NAME}!</h6>
             </span>
           </>
         }
@@ -54,6 +43,32 @@ const LoginModal = ({
           <Row>
             <Col span={24}>
               <Form.Item
+                name="first_name"
+                rules={[
+                  {
+                    required: true,
+                    message: validateMsgRequired('First name'),
+                  },
+                ]}
+              >
+                <Input placeholder="First name" size="large" />
+              </Form.Item>
+            </Col>
+            <Col span={24}>
+              <Form.Item
+                name="last_name"
+                rules={[
+                  {
+                    required: true,
+                    message: validateMsgRequired('Last name'),
+                  },
+                ]}
+              >
+                <Input placeholder="Last name" size="large" />
+              </Form.Item>
+            </Col>
+            <Col span={24}>
+              <Form.Item
                 name="email"
                 rules={[
                   {
@@ -62,7 +77,7 @@ const LoginModal = ({
                   },
                 ]}
               >
-                <Input placeholder="Email or user name" size="large" />
+                <Input placeholder="Email" size="large" />
               </Form.Item>
             </Col>
             <Col span={24}>
@@ -83,32 +98,16 @@ const LoginModal = ({
                 />
               </Form.Item>
             </Col>
-            <Col span={24}>
-              <h6 className={style.forgotText}>Forgot your Password?</h6>
-            </Col>
+
             <Col span={24}>
               <Button block size="large" type="primary" htmlType="submit">
-                Login
+                Register
               </Button>
-            </Col>
-            <Col span={24}>
-              <span className={style.registerNowWrapper}>
-                <strong>Don't have an account</strong>
-                <Button
-                  size="middle"
-                  type="link"
-                  htmlType="submit"
-                  onClick={handleOpenRegister}
-                >
-                  Register now!
-                </Button>
-              </span>
             </Col>
           </Row>
         </Form>
       </Modal>
-      <SignUpModal open={registerOpen} handleCancel={handleCloseRegister} />
     </>
   )
 }
-export default LoginModal
+export default SignUpModal

@@ -16,3 +16,5 @@ export const user = createSlice({
   },
 })
 export const { userLogOutRequest } = user.actions
+
+export default user.reducer

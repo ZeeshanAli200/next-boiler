@@ -1,11 +1,19 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { user } from './slicers/user'
+import reducers from '@/store/slicers'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+
+const persistConfig = {
+  key: 'BIGGBEATS',
+  storage,
+  whitelist: ['user'],
+}
+
+const pReducer = persistReducer(persistConfig, reducers)
 
 const store = configureStore({
-  reducer: {
-    userReducer: user.reducer,
-  },
+  reducer: pReducer,
 })
+let persistor = persistStore(store)
 
-// export default the store
-export default store
+export { store, persistor }
