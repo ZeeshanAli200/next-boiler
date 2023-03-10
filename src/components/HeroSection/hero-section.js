@@ -14,7 +14,7 @@ const HeroSection = () => {
   }
   return (
     <div className={style.heroWrapper}>
-      <Slider {...settings} autoplay>
+      <Slider fade {...settings} autoplay>
         <div className={style.imageSliderWrapper}>
           <Row style={{ width: '100%' }} align="middle">
             <Col span={12}>

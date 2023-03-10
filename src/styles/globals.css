@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap');
+
 *{
   font-family: Jost;
 
@@ -133,9 +134,26 @@ a {
 footer {
   height: 30px;
 }
-
+.page_wrapper{
+  padding: 0 20px;
+}
 main {
-  flex: 1;
+  flex: 1;  
+}
+.text-animate:hover {
+  color: #ff871d;
+}
 
-  
+.text-animate::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #ff871d;
+  transition: width 0.3s;
+}
+.text-animate:hover::after {
+  width: 100%;
 }

@@ -4,7 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.scss'
 import { ACCESS_TYPES, BRAND_NAME } from '@/constants'
 import { useSelector } from 'react-redux'
-import { HeroSection } from '@/components'
+import { CategorySectionSlider, HeroSection } from '@/components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,8 +21,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
+      <div className={styles.page_wrapper}>
         <HeroSection />
+        <CategorySectionSlider />
       </div>
     </>
   )
