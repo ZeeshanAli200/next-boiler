@@ -4,6 +4,7 @@ import { Button, Col, Row, Typography } from 'antd'
 import Image from 'next/image'
 import React from 'react'
 import Slider from 'react-slick'
+import ProductCard from '../product-card/product-card'
 import style from './styles.module.scss'
 
 const settings = {
@@ -24,6 +25,20 @@ const settingsSelectCategory = {
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
 }
+const Products = [
+  {
+    url: Assets.ShoeImage1,
+  },
+  {
+    url: Assets.ShoeImage2,
+  },
+  {
+    url: Assets.ShoeImage3,
+  },
+  {
+    url: Assets.ShoeImage4,
+  },
+]
 const CategorySelectionSection = () => {
   return (
     <div className={`page_wrapper ${style.categorySelectorWrapper}`}>
@@ -57,66 +72,12 @@ const CategorySelectionSection = () => {
             </div>
           </Slider>
         </Col>
-        {/* <Col
-          lg={{ span: 20 }}
-          xl={{ span: 20 }}
-          md={{ span: 19 }}
-          sm={{ span: 14 }}
-          xs={{ span: 12 }}
-          className={style.viewBtnWrapper}
-        >
-          <Button type="primary">View all</Button>
-        </Col> */}
+
         <Col span={24}>
-          <Slider {...settings} autoplay>
-            <div className={style.imageSliderWrapper}>
-              <Image
-                fill
-                className={style.categoryImage}
-                src={Assets.ShoeImage1}
-              />
-              <h4>Leather Shoes</h4>
-            </div>
-            <div className={style.imageSliderWrapper}>
-              <Image
-                fill
-                className={style.categoryImage}
-                src={Assets.ShoeImage2}
-              />
-              <h4>Sports Shoes</h4>
-            </div>
-            <div className={style.imageSliderWrapper}>
-              <Image
-                fill
-                className={style.categoryImage}
-                src={Assets.ShoeImage3}
-              />
-              <h4>Sneakers</h4>
-            </div>
-            <div className={style.imageSliderWrapper}>
-              <Image
-                fill
-                className={style.categoryImage}
-                src={Assets.ShoeImage4}
-              />
-              <h4>Sandals</h4>
-            </div>
-            <div className={style.imageSliderWrapper}>
-              <Image
-                fill
-                className={style.categoryImage}
-                src={Assets.ShoeImage1}
-              />
-              <h4>Kids</h4>
-            </div>
-            <div className={style.imageSliderWrapper}>
-              <Image
-                fill
-                className={style.categoryImage}
-                src={Assets.ShoeImage2}
-              />
-              <h4>Women sandals</h4>
-            </div>
+          <Slider {...settings} autoplay className={style.productSlider}>
+            {Products.map((item) => (
+              <ProductCard item={item} />
+            ))}
           </Slider>
         </Col>
       </Row>

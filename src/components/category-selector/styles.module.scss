@@ -39,12 +39,6 @@ $background-secondary: $background-color-secondary;
         justify-content: flex-end;
     }
     .titleWrapper {
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: flex-start;
-        // h3 {
-        //     cursor: pointer;
-        // }
         .selectCategorySlider {
             display: flex;
             align-items: center;
@@ -55,15 +49,7 @@ $background-secondary: $background-color-secondary;
             }
         }
     }
-}
-.imageSliderWrapper {
-    // width: 100%;
-    // display: flex !important;
-    // justify-content: center;
-    // align-items: center;
-    outline: none;
-    h4 {
-        font-weight: 500;
-        text-align: center;
+    .productSlider {
+        background-color: #fff !important;
     }
 }
