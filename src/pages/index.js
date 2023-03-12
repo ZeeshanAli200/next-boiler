@@ -4,7 +4,11 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.scss'
 import { ACCESS_TYPES, BRAND_NAME } from '@/constants'
 import { useSelector } from 'react-redux'
-import { CategorySectionSlider, HeroSection } from '@/components'
+import {
+  CategorySectionSlider,
+  HeroSection,
+  CategorySelectionSection,
+} from '@/components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,6 +28,7 @@ export default function Home() {
       <div className={styles.page_wrapper}>
         <HeroSection />
         <CategorySectionSlider />
+        <CategorySelectionSection />
       </div>
     </>
   )

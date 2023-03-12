@@ -4,7 +4,9 @@ import ConfirmationModal from './Confirmation-modal'
 import LoginModal from './Login-modal/login-modal'
 import HeroSection from './HeroSection/hero-section'
 import CategorySectionSlider from './category-slider/category'
+import CategorySelectionSection from './category-selector/category'
 export {
+  CategorySelectionSection,
   Header,
   SideBar,
   ConfirmationModal,
